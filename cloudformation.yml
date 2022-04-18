@@ -18,6 +18,23 @@ Resources:
                 token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrg}/*:*
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/PowerUserAccess
+      Policies:
+        - PolicyName: ModifySomeIAMButNotAll
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - iam:AttachRolePolicy
+                  - iam:CreateRole
+                  - iam:DeleteRole
+                  - iam:DeleteRolePolicy
+                  - iam:DetachRolePolicy
+                  - iam:GetRole
+                  - iam:PassRole
+                  - iam:PutRolePolicy
+                Resource:
+                  # Predefined projects only - to avoid privilege escalation
+                  - !Sub arn:aws:iam::${AWS::AccountId}:role/scheduler-*
 
   GithubOidc:
     Type: AWS::IAM::OIDCProvider
