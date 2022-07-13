@@ -1,5 +1,7 @@
 # AWS + Github OIDC setup
 
+[ ![CI status](https://github.com/Cloudbourn/github-oidc/actions/workflows/deploy.yml/badge.svg) ](https://github.com/Cloudbourn/github-oidc/actions/workflows/deploy.yml "View workflow")
+
 This repo contains the configuration to allow Github Actions free reign in the cloud. 🌬☁
 
 The generated role is only allowed to be assumed by repositories in the Cloudbourn organization.
