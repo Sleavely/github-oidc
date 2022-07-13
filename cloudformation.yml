@@ -30,6 +30,7 @@ Resources:
                   - iam:DeleteRolePolicy
                   - iam:DetachRolePolicy
                   - iam:GetRole
+                  - iam:GetRolePolicy
                   - iam:PassRole
                   - iam:PutRolePolicy
                   - iam:Tag*
