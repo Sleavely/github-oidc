@@ -36,8 +36,7 @@ Resources:
                   - iam:Tag*
                   - iam:Untag*
                 Resource:
-                  # Predefined projects only - to avoid privilege escalation
-                  - !Sub arn:aws:iam::${AWS::AccountId}:role/scheduler-*
+                  - '*'
 
   GithubOidc:
     Type: AWS::IAM::OIDCProvider
