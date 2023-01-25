@@ -50,3 +50,9 @@ Since OIDC was not set up, the stack was not initially deployed with Github Acti
 ```sh
 AWS_PROFILE=cloudbourn AWS_REGION=eu-west-1 aws cloudformation deploy --stack-name github-oidc --template-file cloudformation.yml --capabilities CAPABILITY_IAM
 ```
+
+Retrieving the generated role name:
+
+```sh
+AWS_PROFILE=cloudbourn AWS_REGION=eu-west-1 aws cloudformation describe-stack-resources --stack-name github-oidc --query "StackResources[?LogicalResourceId=='Role'].PhysicalResourceId" --output text
+```
