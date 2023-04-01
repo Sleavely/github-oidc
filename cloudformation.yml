@@ -17,7 +17,7 @@ Resources:
               StringLike:
                 token.actions.githubusercontent.com:sub: !Sub repo:${GitHubOrg}/*:*
       ManagedPolicyArns:
-        - arn:aws:iam::aws:policy/PowerUserAccess
+        - arn:aws:iam::aws:policy/PowerUserAccess # https://github.com/z0ph/MAMIP/blob/master/policies/PowerUserAccess
       Policies:
         - PolicyName: ModifySomeIAMButNotAll
           PolicyDocument:
