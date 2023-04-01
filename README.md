@@ -1,6 +1,6 @@
 # AWS + Github OIDC setup
 
-[ ![CI status](https://github.com/Cloudbourn/github-oidc/actions/workflows/deploy.yml/badge.svg) ](https://github.com/Cloudbourn/github-oidc/actions/workflows/deploy.yml "View workflow")
+[ ![CI status](https://github.com/Sleavely/github-oidc/actions/workflows/deploy.yml/badge.svg) ](https://github.com/Sleavely/github-oidc/actions/workflows/deploy.yml "View workflow")
 
 This repo contains the configuration to allow Github Actions free reign in the cloud. 🌬☁
 
@@ -53,8 +53,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          # Change this role ARN like you did during setup
-          role-to-assume: arn:aws:iam::484537476580:role/github-oidc-Role-11HTWA6AOKQLC
+          role-to-assume: arn:aws:iam::479330620126:role/github-oidc-Role-1DNEHO655IPHU
           aws-region: eu-west-1
 
       - name: Build

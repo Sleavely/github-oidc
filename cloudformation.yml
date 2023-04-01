@@ -1,7 +1,7 @@
 Parameters:
   GitHubOrg:
     Type: String
-    Default: Cloudbourn
+    Default: Sleavely
 
 Resources:
   Role:
