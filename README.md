@@ -26,6 +26,10 @@ The generated role is only allowed to be assumed by repositories under your user
 
 4. Now modify the `role-to-assume` ARN in [deploy.yml](./.github/workflows/deploy.yml) with your role name. Don't forget to update the AWS Account ID.
 
+5. If you forked the repository you need to explicitly go to Actions and enable workflows.
+
+6. Commit and push your changes
+
 ## Usage in Github Actions
 
 Here's a sample workflow using the OIDC role.
